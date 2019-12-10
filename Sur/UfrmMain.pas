@@ -532,7 +532,7 @@ specimen.
         (GroupName),(SpecType),(SpecStatus),(EquipChar),
         (CombinID),'{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}{!@#}'+EquipUnid,(LisFormCaption),(ConnectString),
         (QuaContSpecNoG),(QuaContSpecNo),(QuaContSpecNoD),'',
-        true,true,'常规');
+        false,true,'常规');
       if not VarIsEmpty(FInts) then FInts:= unAssigned;
     end;    
   end;
