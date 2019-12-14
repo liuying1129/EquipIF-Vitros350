@@ -508,7 +508,7 @@ specimen.
       begin
         CheckDate:='20'+copy(ls[i],24,2)+'-'+copy(ls[i],26,2)+'-'+copy(ls[i],28,2)+' '+copy(ls[i],18,2)+':'+copy(ls[i],20,2)+':'+copy(ls[i],22,2);
         SpecNo:=GetSpecNo(ls[i]);
-        if copy(ls[i],45,1)='1' then SpecType:='血清'
+        if copy(ls[i],45,1)='1' then SpecType:='血浆'//越秀中医做血浆,参考值也设置为血浆
           else if copy(ls[i],45,1)='2' then SpecType:='脑脊液'
             else if copy(ls[i],45,1)='3' then SpecType:='尿液';
       end;
@@ -518,7 +518,7 @@ specimen.
       if (LowerCase(copy(ls[i],5,1))='f') or (LowerCase(copy(ls[i],5,1))='g') then
       begin
         dlttype:=copy(ls[i],6,4);
-        sValue:=trim(copy(ls[i],10,7));
+        sValue:=trim(copy(ls[i],10,8));
       end;
 
       ReceiveItemInfo[i]:=VarArrayof([dlttype,sValue,'','']);
